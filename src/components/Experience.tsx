@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRight, Calendar } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { SectionHeader } from "./generics/sectionHeader";
 import { Button, Carousel } from "antd";
 import { useRef } from "react";
