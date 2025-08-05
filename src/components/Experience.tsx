@@ -79,7 +79,7 @@ export function Experience() {
               className="!bg-black !text-white !border-none hover:!text-orange-500"
 
             />
-          </div>
+          </div>  
 
           <Carousel dots={false} ref={carouselRef} draggable>
             {experiences.map((exp, index) => (
