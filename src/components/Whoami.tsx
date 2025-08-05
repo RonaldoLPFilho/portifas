@@ -1,6 +1,5 @@
 import { GraduationCap, Mail, MapPin } from "lucide-react";
 import pic from "../assets/mypic.jpg";
-import abstractSvg from "../assets/abstract-timekeeper.svg?url";
 import "../styles/whoami.css";
 
 export function WhoamiSection() {
@@ -9,7 +8,7 @@ export function WhoamiSection() {
       {/* Fundo animado */}
       <div className="absolute inset-0 z-0 flex items-center justify-center">
         <img
-          src={abstractSvg}  
+          src={`${import.meta.env.BASE_URL}abstract-timekeeper.svg`} 
           alt="Background"
           className="w-[130] h-[130%] animate-spin-slow moveBackground"
         />
