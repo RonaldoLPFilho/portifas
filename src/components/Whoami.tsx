@@ -8,7 +8,7 @@ export function WhoamiSection() {
 
       <div className="absolute inset-0 z-0 flex items-center justify-center">
         <img
-          src="/public/img/abstract-timekeeper.svg" 
+          src="/img/abstract-timekeeper.svg" 
           alt="Background"
           className="w-[130%] h-[130%] animate-spin-slow moveBackground"
         />
@@ -51,7 +51,7 @@ export function WhoamiSection() {
           </div>
 
           <div className="order-1 lg:order-2 flex justify-center">
-            <div className="w-140 h-140 sm:w-56 sm:h-56 lg:w-140 lg:h-140 rounded-full overflow-hidden border-4 border-orange-500">
+            <div className="w-56 h-56 sm:w-56 sm:h-56 lg:w-140 lg:h-140 rounded-full overflow-hidden border-4 border-orange-500">
               <img
                 src={pic}
                 alt="My photo"
