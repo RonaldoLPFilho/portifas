@@ -1,3 +1,4 @@
+import { Courses } from "./components/Courses"
 import { Education } from "./components/Education"
 import { Experience } from "./components/Experience"
 import { Stack } from "./components/Stack"
@@ -21,6 +22,10 @@ function App() {
 
         <div id="education">
           <Education/>
+        </div>
+
+        <div id="courses">
+          <Courses/>
         </div>
       </div>
     </>

@@ -58,7 +58,7 @@ export function Experience() {
     const prev = () => carouselRef.current?.prev();
   
     return (
-      <section className="py-20 bg-black flex justify-center w-full ">
+      <section className="py-20 bg-black flex justify-center w-full">
         <div className="w-[65%] px-4">
           <SectionHeader
             title="Experiência Profissional"
