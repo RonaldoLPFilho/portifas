@@ -1,6 +1,6 @@
 import { GraduationCap, Mail, MapPin } from "lucide-react";
 import pic from "../assets/mypic.jpg";
-import abstractSvg from "../assets/abstract-timekeeper.svg";
+import abstractSvg from "../assets/abstract-timekeeper.svg?url";
 import "../styles/whoami.css";
 
 export function WhoamiSection() {
