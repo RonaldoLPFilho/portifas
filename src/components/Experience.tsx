@@ -1,7 +1,8 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { SectionHeader } from "./generics/sectionHeader";
-import { Button, Carousel } from "antd";
+import { Button, Carousel, Collapse } from "antd";
 import { useRef } from "react";
+import type { CollapseProps } from 'antd';
 
 const experiences = [
   {
@@ -59,7 +60,7 @@ export function Experience() {
   
     return (
       <section className="py-20 bg-black flex justify-center w-full">
-        <div className="w-[65%] px-4">
+        <div className="w-[90%] lg:w-[65%] px-4">
           <SectionHeader
             title="Experiência Profissional"
             subtitle="Minha jornada até aqui"
@@ -77,42 +78,63 @@ export function Experience() {
               icon={<ArrowRight className="w-10 h-10" />}
               onClick={next}
               className="!bg-black !text-white !border-none hover:!text-orange-500"
-
             />
           </div>  
 
           <Carousel dots={false} ref={carouselRef} draggable>
-            {experiences.map((exp, index) => (
-              <div key={index}>
-                <div className="p-6">
-                  <div className="flex flex-wrap justify-between items-start mb-4">
-                    <div>
-                      <h3 className="text-3xl text-center font-semibold text-white">
-                        {exp.company}
-                      </h3>
-                      <div className="grid gap-3">
-                        {exp.roles.map((role, i) => (
-                          <div key={i} className="my-3">
-                            <p className="text-orange-500 text-xl">{role.name}</p>
-                            <div className="flex gap-2">
-                              <span className="text-gray-400 mb-3">
-                                {role.period}
-                              </span>
-                            </div>
-                            <span className="text-gray-300 text-lg leading-relaxed">
-                              {role.description}
-                            </span>
-                          </div>
-                        ))}
+          {experiences.map((exp, index) => (
+            <div key={index}>
+              <div className="p-4 sm:p-6">
+                <h3 className="text-2xl sm:text-3xl text-center font-semibold text-white mb-6">
+                  {exp.company}
+                </h3>
+                
+                <div className="grid gap-4">
+                  {exp.roles.map((role, i) => {
+                    const collapseItems: CollapseProps['items'] = [
+                      {
+                        key: '1',
+                        label: (
+                          <span className="text-orange-500 font-semibold text-lg sm:text-lg font-medium">
+                            Descrição
+                          </span>
+                        ),
+                        children: (
+                          <p className="text-gray-300 text-sm sm:text-base leading-relaxed text-center sm:text-justify">
+                            {role.description}
+                          </p>
+                        ),
+                      },
+                    ];
+
+                    return (
+                      <div
+                        key={i}
+                        className="my-3 border border-neutral-800 p-4 rounded-lg bg-neutral-900"
+                      >
+                        <p className="text-orange-500 text-lg sm:text-xl font-medium text-center sm:text-left">
+                          {role.name}
+                        </p>
+                        <div className="flex justify-center sm:justify-start gap-2 mb-2">
+                          <span className="text-gray-400 text-sm sm:text-base">
+                            {role.period}
+                          </span>
+                        </div>
+
+                        <Collapse 
+                          ghost
+                          items={collapseItems}
+                          className="[&_.ant-collapse-arrow]:!text-orange-500 [&_.ant-collapse-arrow_svg]:!text-orange-500"
+                        />
                       </div>
-                    </div>
-                  </div>
+                    );
+                  })}
                 </div>
               </div>
-            ))}
-          </Carousel>
+            </div>
+          ))}
+        </Carousel>
         </div>
-
       </section>
     );
-  }
+}
