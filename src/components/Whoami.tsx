@@ -28,8 +28,7 @@ export function WhoamiSection() {
 
             <p className="text-base sm:text-lg text-gray-300 mb-8 leading-relaxed px-2 sm:px-0">
               Sou apaixonado por transformar ideias e desafios em soluções
-              tecnológicas. Especializado no ecossistema Java/Spring e React, com
-              forte experiência em arquitetura de microsserviços e desenvolvimento web moderno
+              tecnológicas. Com experiência no ecossistema Java/Spring e React, para desenvolvimento web moderno.
             </p>
 
             <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 justify-center lg:justify-start text-gray-300">
