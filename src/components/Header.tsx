@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import logo from "/img/logo.png"
 import { Menu, X } from "lucide-react";
 
 const navItems = [
