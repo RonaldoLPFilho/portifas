@@ -1,13 +1,14 @@
 import { Courses } from "./components/Courses"
 import { Education } from "./components/Education"
 import { Experience } from "./components/Experience"
+import { Header } from "./components/Header"
 import { Stack } from "./components/Stack"
 import { WhoamiSection } from "./components/Whoami"
 
 function App() {
   return (
-    <>
       <div className="min-h-screen bg-black">
+        <Header/>
         <div id="whoami">
           <WhoamiSection/>
         </div>
@@ -28,7 +29,6 @@ function App() {
           <Courses/>
         </div>
       </div>
-    </>
   )
 }
 
