@@ -30,7 +30,7 @@ export function Education(){
                         <h3 className="text-3xl font-semibold text-white mb-2">{item.name} </h3>
                         <p className="text-xl text-orange-500">{item.institute} <span className="text-lg text-gray-300">{item.type}</span></p> 
 
-                        <p className="text-gray-600 my-2">{item.period} ( <span>{item.status}</span> )</p> 
+                        <p className="text-gray-600 my-2">{item.period} (<span>{item.status}</span>)</p> 
                     </div>
                 ))}
 
